@@ -42,3 +42,5 @@ let Mara = new Image('mara','Mara.jpg','mara', 'animal')
 let Raccoon = new Image('raccoon','Raccoon.jpg', 'raccoon', 'animal' )
 
 //push objects to its corresponding group array
+let arrayName = 
+if()
