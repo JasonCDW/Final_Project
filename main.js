@@ -36,10 +36,9 @@ let Red = new Image ('red', 'red.gif', 'red', 'color');
 let Green = new Image ('green', 'green.gif', 'green', 'color');
 
 //instantiate new instance of object constructor for exotic animals
-let = new Image('','','')
-let = new Image('','','')
-let = new Image('', '', '')
-let = new Image('', )
-let = new Image ('')
+let Cabra = new Image('cabra','cabra.jpg','cabra','animal')
+let Cow = new Image('fluffy cow','FluffyCow.jpg','cow', 'animal')
+let Mara = new Image('mara','Mara.jpg','mara', 'animal')
+let Raccoon = new Image('raccoon','Raccoon.jpg', 'raccoon', 'animal' )
 
 //push objects to its corresponding group array
