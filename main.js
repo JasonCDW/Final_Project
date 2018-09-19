@@ -41,6 +41,11 @@ let Cow = new Image('fluffy cow','FluffyCow.jpg','cow', 'animal')
 let Mara = new Image('mara','Mara.jpg','mara', 'animal')
 let Raccoon = new Image('raccoon','Raccoon.jpg', 'raccoon', 'animal' )
 
-//push objects to its corresponding group array
-let arrayName = 
-if()
+//declare variables and set objects to corresponding group array
+let superheroArray = [Batman, Deadpool, Hulk, Spiderman, Wolverine];
+let clothingArray = [Jacket1, Hat, Shirt, Shirt2, Sneaker, Watch, Shoe];
+let storyPathArray = [Romance, Tragedy, Comedy];
+let colorArray = [Blue, Orange, Yellow, Red, Green];
+let animalArray = [Cabra, Cow, Mara, Raccoon];
+let numberArray = [];
+
