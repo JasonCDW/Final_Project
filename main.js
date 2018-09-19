@@ -81,7 +81,7 @@ let randomAnimalImage = function(){
 }
 
 //define a function to display in html the previously clicked items for the user to view reduced in size (stretch goal)
-let displayImage = function(){
+let displayHeroImage = function(){
     elImageContainer.innerHTML = '';
     for (let i = 0; i<3; i++ ){
         let imageObject = randomSuperHeroImage();
