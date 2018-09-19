@@ -27,9 +27,9 @@ let Watch = new Image ('watch', 'watch_1.jpg', 'watch', 'clothing');
 let Shoe = new Image ('dress shoe', 'shoe_2.jpg', 'shoe','clothing');
 
 //instantiate new instances of object constructor for story paths
-let Romance = new Image ('romance', 'romance_back.jpg', 'romance','storyPath');
-let Tragedy = new Image ('tragedy','tragedy_back.jpg', 'tragedy','storyPath');
-let Comedy = new Image ('comedy', 'comedy_back.jpg', 'comedy', 'storyPath');
+let Romance = new Image ('romance', 'images/settings/romance_back.jpg', 'romance','storyPath');
+let Tragedy = new Image ('tragedy','images/settings/tragedy_back.jpg', 'tragedy','storyPath');
+let Comedy = new Image ('comedy', 'images/settings/comedy_back.jpg', 'comedy', 'storyPath');
 
 //instantiate new instances of object constructor for colors
 let Blue = new Image ('blue', 'blue.gif', 'blue','color');
