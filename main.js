@@ -1,6 +1,12 @@
 //define array to hold user's responses
 let responseArray = [];
 
+let elImageContainer = document.getElementById('iamge-container');
+
+let firstImage;
+let secondImage;
+let thirdImage;
+
 //create an object constructor
 let Image = function(name, filePath, id, group){
     this.name = name;
@@ -75,5 +81,28 @@ let randomAnimalImage = function(){
 }
 
 //define a function to display in html the previously clicked items for the user to view reduced in size (stretch goal)
+let displayImage = function(){
+    elImageContainer.innerHTML = '';
+    for (let i = 0; i<3; i++ ){
+        let imageObject = randomSuperHeroImage();
+        if(firstImage === 0){
+            firstImage = imageObject;
+        }else if (i === 1){
+            while (imageObject.id === firstImage.id) {
+                imageObject = randomSuperHeroImage();
+                console.log('second while',imageObject.id);
+            }
+            secondImage = imageObject
+        }else {
+            while (imageObject.id === firstImage.id || imageObject.id === secondImage.id) {
+                imageObject = randomSuperHeroImage();
+                console.log('third while',imageObject.id);
+            }    
+            thirdImage = imageObject
+        }
+        }
+
+    }
+
 
 //define a fuction for the event handler, needs to store the item chosen to responseArray
