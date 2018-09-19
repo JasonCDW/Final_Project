@@ -1,7 +1,7 @@
 //define array to hold user's responses
 let responseArray = [];
 
-let elImageContainer = document.getElementById('iamge-container');
+let elImageContainer = document.getElementById('image-container');
 
 let firstImage;
 let secondImage;
@@ -71,7 +71,7 @@ let randomClothingImage = function(){
 }
 let randomColorImage = function(){
     let randomColorNumber = Math.floor(Math.random()*colorArray.length);
-    let colorIndex = colorArray[randomColorImage];
+    let colorIndex = colorArray[randomColorNumber];
     return colorIndex;
 }
 let randomAnimalImage = function(){
