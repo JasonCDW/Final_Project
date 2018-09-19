@@ -53,8 +53,28 @@ let animalArray = [Cabra, Cow, Mara, Raccoon];
 let numberArray = [];
 
 //defining a function to randomize all the arrays except numberArray
-
-
+let randomSuperHeroImage = function(){
+    let randomHeroNumber = Math.floor(Math.random()* superheroArray.length);
+    let superHeroIndex = superheroArray[randomHeroNumber].filePath;
+    return superHeroIndex;
+}
+let randomClothingImage = function(){
+    let randomClothingNumber = Math.floor(Math.random()* clothingArray.length);
+    let clothingIndex = clothingArray[randomClothingNumber].filePath;
+    return clothingIndex;
+}
+let randomColorImage = function(){
+    let randomColorNumber = Math.floor(Math.random()*colorArray.length);
+    let colorIndex = colorArray[randomColorImage];
+    return colorIndex;
+}
+let randomAnimalImage = function(){
+    let randomAnimalNumber = Math.floor(Math.random()* animalArray);
+    let animalIndex = animalArray[randomAnimalNumber];
+    return animalIndex;
+}
+    
+}
 //define a function to display in html the previously clicked items for the user to view reduced in size (stretch goal)
 
 //define a fuction for the event handler, needs to store the item chosen to responseArray
