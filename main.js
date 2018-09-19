@@ -1,3 +1,6 @@
+//define array to hold user's responses
+let responseArray = [];
+
 //create an object constructor
 let Image = function(name, filePath, id, group){
     this.name = name;
@@ -49,3 +52,9 @@ let colorArray = [Blue, Orange, Yellow, Red, Green];
 let animalArray = [Cabra, Cow, Mara, Raccoon];
 let numberArray = [];
 
+//defining a function to randomize all the arrays except numberArray
+
+
+//define a function to display in html the previously clicked items for the user to view reduced in size (stretch goal)
+
+//define a fuction for the event handler, needs to store the item chosen to responseArray
