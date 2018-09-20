@@ -58,37 +58,26 @@ let colorArray = [Blue, Orange, Yellow, Red, Green];
 let animalArray = [Cabra, Cow, Mara, Raccoon];
 let numberArray = [];
 
-//defining a function to randomize all the arrays except numberArray
+//Change HTML Background Functions
+function changeImage() {
+    document.body.style.backgroundImage = 'url("images/settings/romance_back.jpg")';
+}
 
+function changeImage1() {
+    document.body.style.backgroundImage = 'url("images/settings/comedy_back.jpg")';
+}
+
+function changeImage2() {
+    document.body.style.backgroundImage = 'url("images/settings/tragedy_back.jpg")';
+}
+
+//defining a function to randomize all the arrays except numberArray
 function randomImage (arr) {
     let randomNumber = Math.floor(Math.random() * arr.length);
     let randomObject = arr[randomNumber];
     return randomObject;
-}
-////////////
+};
 
-// let randomSuperHeroImage = function(){
-//     let randomHeroNumber = Math.floor(Math.random()* superheroArray.length);
-//     let superHeroIndex = superheroArray[randomHeroNumber];
-//     return superHeroIndex;
-// }
-// let randomClothingImage = function(){
-//     let randomClothingNumber = Math.floor(Math.random()* clothingArray.length);
-//     let clothingIndex = clothingArray[randomClothingNumber];
-//     return clothingIndex;
-// }
-// let randomColorImage = function(){
-//     let randomColorNumber = Math.floor(Math.random()*colorArray.length);
-//     let colorIndex = colorArray[randomColorNumber];
-//     return colorIndex;
-// }
-// let randomAnimalImage = function(){
-//     let randomAnimalNumber = Math.floor(Math.random()* animalArray);
-//     let animalIndex = animalArray[randomAnimalNumber];
-//     return animalIndex;
-// }
-
-/////////////
 //define a function to display in html the previously clicked items for the user to view reduced in size (stretch goal)
 let displayImage = function(arr){
     elImageContainer.innerHTML = '';
