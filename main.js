@@ -16,21 +16,21 @@ let Image = function(name, filePath, id, group){
 };
 
 //instantiate new instances of Image constructor
-let Batman = new Image ('Batman','batman.jpg', 'batman', 'superhero');
-let Deadpool = new Image ('Deadpool', 'deadpool.jpg', 'deadpool','superhero');
-let Hulk = new Image ('Hulk', 'hulk.jpg', 'hulk','superhero');
-let Spiderman = new Image ('Spiderman', 'spiderman.jpg', 'spiderman','superhero');
-let Wolverine = new Image ('Wolverine', 'wolverine.jpg', 'wolverine', 'superhero');
+let Batman = new Image ('Batman','images/superheroes/batman.jpg', 'batman', 'superhero');
+let Deadpool = new Image ('Deadpool', 'images/superheroes/deadpool.jpg', 'deadpool','superhero');
+let Hulk = new Image ('Hulk', 'images/superheroes/hulk.jpg', 'hulk','superhero');
+let Spiderman = new Image ('Spiderman', 'images/superheroes/spiderman.jpg', 'spiderman','superhero');
+let Wolverine = new Image ('Wolverine', 'images/superheroes/wolverine.jpg', 'wolverine', 'superhero');
 
 
 //instantiate new instances of object constructor for clothes
-let Jacket1 = new Image ('jacket', 'jacket_1.jpg', 'jacket','clothing');
-let Hat = new Image ('baseball cap', 'jacket_1.jpg', 'cap', 'clothing');
-let Shirt = new Image ('blue button-down', 'shirt_1.jpg','shirt','clothing');
-let Shirt2 = new Image ('white button-down', 'shirt_2.jpg','shirt2', 'clothing');
-let Sneaker = new Image ('sneaker', 'shoe_1.jpg', 'sneaker','clothing');
-let Watch = new Image ('watch', 'watch_1.jpg', 'watch', 'clothing');
-let Shoe = new Image ('dress shoe', 'shoe_2.jpg', 'shoe','clothing');
+let Jacket1 = new Image ('jacket', 'images/clothing/jacket_1.jpg', 'jacket','clothing');
+let Hat = new Image ('baseball cap', 'images/clothing/hat_1.jpg', 'cap', 'clothing');
+let Shirt = new Image ('blue button-down', 'images/clothing/shirt_1.jpg','shirt','clothing');
+let Shirt2 = new Image ('white button-down', 'images/clothing/shirt_2.jpg','shirt2', 'clothing');
+let Sneaker = new Image ('sneaker', 'images/clothing/shoe_1.jpg', 'sneaker','clothing');
+let Watch = new Image ('watch', 'images/clothing/watch_1.jpg', 'watch', 'clothing');
+let Shoe = new Image ('dress shoe', 'images/clothing/shoe_2.jpg', 'shoe','clothing');
 
 //instantiate new instances of object constructor for story paths
 let Romance = new Image ('romance', 'images/settings/romance_back.jpg', 'romance','storyPath');
@@ -90,9 +90,9 @@ function randomImage (arr) {
 
 /////////////
 //define a function to display in html the previously clicked items for the user to view reduced in size (stretch goal)
-let displayImage = function(){
+let displayImage = function(arr){
     elImageContainer.innerHTML = '';
-    let imageObject = randomImage(superheroArray);
+    let imageObject = randomImage(arr);
     for (let i = 0; i < 3; i++){
         console.log(imageObject);
         if(i === 0){
@@ -100,21 +100,21 @@ let displayImage = function(){
             console.log(firstImage);
         }else if (i === 1){
             while (imageObject.id === firstImage.id) {
-                imageObject = randomImage(superheroArray);
+                imageObject = randomImage(arr);
             }
             secondImage = imageObject;
             console.log(secondImage);
         }else {
-            while (imageObject.id === firstImage.id) {
-                imageObject = randomImage(superheroArray);
+            while (imageObject.id === firstImage.id || imageObject.id === secondImage.id) {
+                imageObject = randomImage(arr);
             }    
             thirdImage = imageObject
-        }
         }
         let elImage = document.createElement('img');
         elImageContainer.appendChild(elImage);
         elImage.setAttribute('id', imageObject.id);
         elImage.src = imageObject.filePath;
+        }
 
 }
 
@@ -122,4 +122,4 @@ let displayImage = function(){
 //define a fuction for the event handler, needs to store the item chosen to responseArray
 
 
-displayImage();
+displayImage(clothingArray);
