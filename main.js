@@ -78,4 +78,3 @@ let randomAnimalImage = function(){
 
 //define a fuction for the event handler, needs to store the item chosen to responseArray
 
-//
