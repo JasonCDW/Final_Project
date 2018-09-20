@@ -59,50 +59,67 @@ let animalArray = [Cabra, Cow, Mara, Raccoon];
 let numberArray = [];
 
 //defining a function to randomize all the arrays except numberArray
-let randomSuperHeroImage = function(){
-    let randomHeroNumber = Math.floor(Math.random()* superheroArray.length);
-    let superHeroIndex = superheroArray[randomHeroNumber].filePath;
-    return superHeroIndex;
-}
-let randomClothingImage = function(){
-    let randomClothingNumber = Math.floor(Math.random()* clothingArray.length);
-    let clothingIndex = clothingArray[randomClothingNumber].filePath;
-    return clothingIndex;
-}
-let randomColorImage = function(){
-    let randomColorNumber = Math.floor(Math.random()*colorArray.length);
-    let colorIndex = colorArray[randomColorNumber];
-    return colorIndex;
-}
-let randomAnimalImage = function(){
-    let randomAnimalNumber = Math.floor(Math.random()* animalArray);
-    let animalIndex = animalArray[randomAnimalNumber];
-    return animalIndex;
-}
 
+function randomImage (arr) {
+    let randomNumber = Math.floor(Math.random() * arr.length);
+    let randomObject = arr[randomNumber];
+    return randomObject;
+}
+////////////
+
+// let randomSuperHeroImage = function(){
+//     let randomHeroNumber = Math.floor(Math.random()* superheroArray.length);
+//     let superHeroIndex = superheroArray[randomHeroNumber];
+//     return superHeroIndex;
+// }
+// let randomClothingImage = function(){
+//     let randomClothingNumber = Math.floor(Math.random()* clothingArray.length);
+//     let clothingIndex = clothingArray[randomClothingNumber];
+//     return clothingIndex;
+// }
+// let randomColorImage = function(){
+//     let randomColorNumber = Math.floor(Math.random()*colorArray.length);
+//     let colorIndex = colorArray[randomColorNumber];
+//     return colorIndex;
+// }
+// let randomAnimalImage = function(){
+//     let randomAnimalNumber = Math.floor(Math.random()* animalArray);
+//     let animalIndex = animalArray[randomAnimalNumber];
+//     return animalIndex;
+// }
+
+/////////////
 //define a function to display in html the previously clicked items for the user to view reduced in size (stretch goal)
-let displayHeroImage = function(){
+let displayImage = function(){
     elImageContainer.innerHTML = '';
-    for (let i = 0; i<3; i++ ){
-        let imageObject = randomSuperHeroImage();
-        if(firstImage === 0){
+    let imageObject = randomImage(superheroArray);
+    for (let i = 0; i < 3; i++){
+        console.log(imageObject);
+        if(i === 0){
             firstImage = imageObject;
+            console.log(firstImage);
         }else if (i === 1){
             while (imageObject.id === firstImage.id) {
-                imageObject = randomSuperHeroImage();
-                console.log('second while',imageObject.id);
+                imageObject = randomImage(superheroArray);
             }
-            secondImage = imageObject
+            secondImage = imageObject;
+            console.log(secondImage);
         }else {
-            while (imageObject.id === firstImage.id || imageObject.id === secondImage.id) {
-                imageObject = randomSuperHeroImage();
-                console.log('third while',imageObject.id);
+            while (imageObject.id === firstImage.id) {
+                imageObject = randomImage(superheroArray);
             }    
             thirdImage = imageObject
         }
         }
+        let elImage = document.createElement('img');
+        elImageContainer.appendChild(elImage);
+        elImage.setAttribute('id', imageObject.id);
+        elImage.src = imageObject.filePath;
 
-    }
+}
 
 
 //define a fuction for the event handler, needs to store the item chosen to responseArray
+
+
+displayImage();
