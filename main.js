@@ -15,7 +15,7 @@ let Image = function(name, filePath, id, group){
     this.group = group;
 };
 
-//instantiate new instances of Image constructor
+//instantiate new instances of Image constructor (For superheroes)
 let Batman = new Image ('Batman','images/superheroes/batman.jpg', 'batman', 'superhero');
 let Deadpool = new Image ('Deadpool', 'images/superheroes/deadpool.jpg', 'deadpool','superhero');
 let Hulk = new Image ('Hulk', 'images/superheroes/hulk.jpg', 'hulk','superhero');
