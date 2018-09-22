@@ -8,3 +8,21 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+#romance-icon, #comedy-icon, #tragedy-icon {
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 2em;
+}
+
+#icon-container {
+    width: 100%;
+    text-align: center;
+}
+
+#romance-icon:hover, #comedy-icon:hover, #tragedy-icon:hover{
+    transform: scale(1.1, 1.1);
+    box-shadow: 10px 10px 5px rgba(128, 128, 128, 0.40);
+}

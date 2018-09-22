@@ -18,9 +18,11 @@
     <!-----Alyssa working on above -->
     
     <img id="createStory" src="images/settings/createStory_back.jpg"/>
-    <button id="clickme" onclick="changeBackgroundImage(Romance);">Romance</button> 
-    <button id="clickme1" onclick="changeBackgroundImage(Comedy);">Comedy</button> 
-    <button id="clickme2" onclick="changeBackgroundImage(Tragedy);">Tragedy</button>
+    <div id = 'icon-container'>
+        <img id='romance-icon'src='images/icons/romance_icon.png' onclick="changeBackgroundImage(Romance);"/>
+        <img id='comedy-icon' src='images/icons/comedy_icon.png' onclick="changeBackgroundImage(Comedy);"/>
+        <img id='tragedy-icon' src='images/icons/tragedy_icon.png' onclick="changeBackgroundImage(Tragedy);"/>
+    </div>
 </body>
 <script src="index.js"></script>
 </html>
