@@ -100,7 +100,7 @@ let displayImage = function(arr){
         }else {
             while (imageObject.id === firstImage.id || imageObject.id === secondImage.id) {
                 imageObject = randomImage(arr);
-            }    
+            }
             thirdImage = imageObject
         }
         let elImage = document.createElement('img');
