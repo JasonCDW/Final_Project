@@ -1,3 +1,4 @@
+
 let elCreateStoryImg = document.getElementById('createStory');
 let elBody = document.getElementById('body');
 
@@ -15,4 +16,4 @@ function changeBackgroundImage(obj) {
         elCreateStoryImg = null;
         console.log(elCreateStoryImg)
     };
-}
+
