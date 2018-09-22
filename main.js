@@ -73,12 +73,14 @@ function changeImage2() {
     document.body.style.backgroundImage = 'url("images/settings/tragedy_back.jpg")';
 }
 
+
 //defining a function to randomize all the arrays except numberArray
 function randomImage (arr) {
     let randomNumber = Math.floor(Math.random() * arr.length);
     let randomObject = arr[randomNumber];
     return randomObject;
 };
+
 
 //define a function to display in html the previously clicked items for the user to view reduced in size (stretch goal)
 let displayImage = function(arr){
@@ -112,9 +114,5 @@ let displayImage = function(arr){
 
 //define a fuction for the event handler, needs to store the item chosen to responseArray
 
-<<<<<<< HEAD
-//
-=======
 
-displayImage(clothingArray);
->>>>>>> cc9fc9a7aec81246cef7ec752f86e15ac2571f69
+//displayImage(clothingArray);
