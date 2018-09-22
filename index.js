@@ -1,3 +1,4 @@
+
 let elCreateStoryImg = document.getElementById('createStory');
 let elBody = document.getElementById('body');
 
@@ -16,12 +17,3 @@ function changeBackgroundImage(obj) {
         console.log(elCreateStoryImg)
     };
 }
-
-
-// function changeImage1() {
-//     document.body.style.backgroundImage = 'url("images/settings/comedy_back.jpg")';
-// }
-
-// function changeImage2() {
-//     document.body.style.backgroundImage = 'url("images/settings/tragedy_back.jpg")';
-// }

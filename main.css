@@ -1,13 +1,21 @@
-img {
-    width: 300px;
-    border-radius: 25px;
-    margin: 2em;
-}
-img:hover {
-    transform: scale(1.1, 1.1);
-    box-shadow: 10px 10px 5px rgba(128, 128, 128, 0.40);
+.bbg { 
+    /* The image used */
+    /* background-image: url('...'); */
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+    
+    
+    
 }
 
 #image-container {
     width: 100%;
     text-align: center;
+}
+
