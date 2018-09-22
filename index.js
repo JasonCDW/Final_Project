@@ -16,4 +16,4 @@ function changeBackgroundImage(obj) {
         elCreateStoryImg = null;
         console.log(elCreateStoryImg)
     };
-
+}
