@@ -2,6 +2,7 @@
 let responseArray = [];
 
 let elImageContainer = document.getElementById('image-container');
+//let elCreateStoryImg = document.getElementById('createStory');
 
 let firstImage;
 let secondImage;
@@ -59,17 +60,7 @@ let animalArray = [Cabra, Cow, Mara, Raccoon];
 let numberArray = [];
 
 //Change HTML Background Functions
-function changeImage() {
-    document.body.style.backgroundImage = 'url("images/settings/romance_back.jpg")';
-}
 
-function changeImage1() {
-    document.body.style.backgroundImage = 'url("images/settings/comedy_back.jpg")';
-}
-
-function changeImage2() {
-    document.body.style.backgroundImage = 'url("images/settings/tragedy_back.jpg")';
-}
 
 //defining a function to randomize all the arrays except numberArray
 function randomImage (arr) {

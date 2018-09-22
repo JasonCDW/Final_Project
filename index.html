@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Final Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
 </head>
-<body>
-    <img id="image" src="images/settings/createStory_back.jpg"/>
-    <button id="clickme" onclick="changeImage();">Romance</button> 
-    <button id="clickme1" onclick="changeImage1();">Comedy</button> 
-    <button id="clickme2" onclick="changeImage2();">Tragedy</button>
+<script src='main.js'></script>
+<body class = 'bbg' id = 'body'>
+    <img id="createStory" src="images/settings/createStory_back.jpg"/>
+    <button id="clickme" onclick="changeBackgroundImage(Romance);">Romance</button> 
+    <button id="clickme1" onclick="changeBackgroundImage(Comedy);">Comedy</button> 
+    <button id="clickme2" onclick="changeBackgroundImage(Tragedy);">Tragedy</button>
 </body>
-<script src="main.js"></script>
-
+<script src="index.js"></script>
 </html>
