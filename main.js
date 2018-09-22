@@ -1,5 +1,6 @@
 //define array to hold user's responses
 let responseArray = [];
+let i = 0;
 
 let elImageContainer = document.getElementById('image-container');
 //let elCreateStoryImg = document.getElementById('createStory');
@@ -18,16 +19,16 @@ let Image = function(name, filePath, id, group){
 
 
 //instantiate new instances of Image constructor
-let Batman = new Image ('Batman','./images/superheroes/batman.jpg', 'batman', 'superhero');
-let Deadpool = new Image ('Deadpool', './images/superheroes/deadpool.jpg', 'deadpool','superhero');
-let Hulk = new Image ('Hulk', './images/superheroes/hulk.jpg', 'hulk','superhero');
-let Spiderman = new Image ('Spiderman', './images/superheroes/spiderman.jpg', 'spiderman','superhero');
-let Wolverine = new Image ('Wolverine', './images/superheroes/wolverine.jpg', 'wolverine', 'superhero');
+let Batman = new Image ('Batman','./images/superheroes/batman.jpg', 'Batman', 'superhero');
+let Deadpool = new Image ('Deadpool', './images/superheroes/deadpool.jpg', 'Deadpool','superhero');
+let Hulk = new Image ('Hulk', './images/superheroes/hulk.jpg', 'Hulk','superhero');
+let Spiderman = new Image ('Spiderman', './images/superheroes/spiderman.jpg', 'Spiderman','superhero');
+let Wolverine = new Image ('Wolverine', './images/superheroes/wolverine.jpg', 'Wolverine', 'superhero');
 
 
 //instantiate new instances of object constructor for clothes
 let Jacket1 = new Image ('jacket', './images/clothing/jacket_1.jpg', 'jacket','clothing');
-let Hat = new Image ('baseball cap', './images/clothing/jacket_1.jpg', 'cap', 'clothing');
+let Hat = new Image ('baseball cap', './images/clothing/hat_1.jpg', 'cap', 'clothing');
 let Shirt = new Image ('blue button-down', './images/clothing/shirt_1.jpg','shirt','clothing');
 let Shirt2 = new Image ('white button-down', './images/clothing/shirt_2.jpg','shirt2', 'clothing');
 let Sneaker = new Image ('sneaker', './images/clothing/shoe_1.jpg', 'sneaker','clothing');
@@ -51,7 +52,7 @@ let Green = new Image ('green', './images/colors/green.gif', 'green', 'color');
 let Cabra = new Image('cabra','./images/animals/cabra.jpg','cabra','animal')
 let Cow = new Image('fluffy cow','./images/animals/FluffyCow.jpg','cow', 'animal')
 let Mara = new Image('mara','./images/animals/Mara.jpg','mara', 'animal')
-let Raccoon = new Image('raccoon','./images/animals/Raccoon.jpg', 'raccoon', 'animal' )
+let Raccoon = new Image('raccoon','./images/animals/RaccoonDog.jpg', 'raccoon', 'animal' )
 
 //declare variables and set objects to corresponding group array
 let superheroArray = [Batman, Deadpool, Hulk, Spiderman, Wolverine];
@@ -61,6 +62,7 @@ let colorArray = [Blue, Orange, Yellow, Red, Green];
 let animalArray = [Cabra, Cow, Mara, Raccoon];
 let numberArray = [];
 
+let ArrArray = [superheroArray, clothingArray, colorArray, animalArray];
 //Change HTML Background Functions
 
 
@@ -78,16 +80,16 @@ let displayImage = function(arr){
     elImageContainer.innerHTML = '';
     let imageObject = randomImage(arr);
     for (let i = 0; i < 3; i++){
-        console.log(imageObject);
+        // console.log(imageObject);
         if(i === 0){
             firstImage = imageObject;
-            console.log(firstImage);
+            // console.log(firstImage);
         }else if (i === 1){
             while (imageObject.id === firstImage.id) {
                 imageObject = randomImage(arr);
             }
             secondImage = imageObject;
-            console.log(secondImage);
+            // console.log(secondImage);
         }else {
             while (imageObject.id === firstImage.id || imageObject.id === secondImage.id) {
                 imageObject = randomImage(arr);
@@ -98,6 +100,7 @@ let displayImage = function(arr){
         elImageContainer.appendChild(elImage);
         elImage.setAttribute('id', imageObject.id);
         elImage.src = imageObject.filePath;
+        elImage.addEventListener('click', selectImg)
         }
 
 }
@@ -105,4 +108,11 @@ let displayImage = function(arr){
 
 //define a fuction for the event handler, needs to store the item chosen to responseArray
 
-displayImage(clothingArray);
+displayImage(superheroArray);
+function selectImg(event){
+    responseArray.push(event.target.id);
+    i++;
+    if (i < ArrArray.length) {
+        displayImage(ArrArray[i]);
+    };
+};
