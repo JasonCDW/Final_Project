@@ -74,6 +74,8 @@ let randomAnimalImage = function(){
     return animalIndex;
 }
 
+
+
 //define a function to display in html the previously clicked items for the user to view reduced in size (stretch goal)
 
 //define a fuction for the event handler, needs to store the item chosen to responseArray
