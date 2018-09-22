@@ -114,5 +114,7 @@ function selectImg(event){
     i++;
     if (i < ArrArray.length) {
         displayImage(ArrArray[i]);
+    } else {
+        window.location.href = "story.html";
     };
 };
