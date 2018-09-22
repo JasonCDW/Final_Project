@@ -103,9 +103,5 @@ let displayImage = function(arr){
 
 //define a fuction for the event handler, needs to store the item chosen to responseArray
 
-<<<<<<< HEAD
-//
-=======
 
 displayImage(clothingArray);
->>>>>>> cc9fc9a7aec81246cef7ec752f86e15ac2571f69
