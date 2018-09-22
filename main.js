@@ -1,6 +1,12 @@
 //define array to hold user's responses
 let responseArray = [];
 
+let elImageContainer = document.getElementById('image-container');
+
+let firstImage;
+let secondImage;
+let thirdImage;
+
 //create an object constructor
 let Image = function(name, filePath, id, group){
     this.name = name;
@@ -8,6 +14,7 @@ let Image = function(name, filePath, id, group){
     this.id = id;
     this.group = group;
 };
+
 
 //instantiate new instances of Image constructor
 let Batman = new Image ('Batman','./images/superheroes/batman.jpg', 'batman', 'superhero');
@@ -25,6 +32,7 @@ let Shirt2 = new Image ('white button-down', './images/clothing/shirt_2.jpg','sh
 let Sneaker = new Image ('sneaker', './images/clothing/shoe_1.jpg', 'sneaker','clothing');
 let Watch = new Image ('watch', './images/clothing/watch_1.jpg', 'watch', 'clothing');
 let Shoe = new Image ('dress shoe', './images/clothing/shoe_2.jpg', 'shoe','clothing');
+
 
 //instantiate new instances of object constructor for story paths
 let Romance = new Image ('romance', 'images/settings/romance_back.jpg', 'romance','storyPath');
@@ -52,28 +60,57 @@ let colorArray = [Blue, Orange, Yellow, Red, Green];
 let animalArray = [Cabra, Cow, Mara, Raccoon];
 let numberArray = [];
 
+//Change HTML Background Functions
+function changeImage() {
+    document.body.style.backgroundImage = 'url("images/settings/romance_back.jpg")';
+}
+
+function changeImage1() {
+    document.body.style.backgroundImage = 'url("images/settings/comedy_back.jpg")';
+}
+
+function changeImage2() {
+    document.body.style.backgroundImage = 'url("images/settings/tragedy_back.jpg")';
+}
+
 //defining a function to randomize all the arrays except numberArray
-let randomSuperHeroImage = function(){
-    let randomHeroNumber = Math.floor(Math.random()* superheroArray.length);
-    let superHeroIndex = superheroArray[randomHeroNumber].filePath;
-    return superHeroIndex;
-}
-let randomClothingImage = function(){
-    let randomClothingNumber = Math.floor(Math.random()* clothingArray.length);
-    let clothingIndex = clothingArray[randomClothingNumber].filePath;
-    return clothingIndex;
-}
-let randomColorImage = function(){
-    let randomColorNumber = Math.floor(Math.random()*colorArray.length);
-    let colorIndex = colorArray[randomColorImage];
-    return colorIndex;
-}
-let randomAnimalImage = function(){
-    let randomAnimalNumber = Math.floor(Math.random()* animalArray);
-    let animalIndex = animalArray[randomAnimalNumber];
-    return animalIndex;
-}
+function randomImage (arr) {
+    let randomNumber = Math.floor(Math.random() * arr.length);
+    let randomObject = arr[randomNumber];
+    return randomObject;
+};
 
 //define a function to display in html the previously clicked items for the user to view reduced in size (stretch goal)
+let displayImage = function(arr){
+    elImageContainer.innerHTML = '';
+    let imageObject = randomImage(arr);
+    for (let i = 0; i < 3; i++){
+        console.log(imageObject);
+        if(i === 0){
+            firstImage = imageObject;
+            console.log(firstImage);
+        }else if (i === 1){
+            while (imageObject.id === firstImage.id) {
+                imageObject = randomImage(arr);
+            }
+            secondImage = imageObject;
+            console.log(secondImage);
+        }else {
+            while (imageObject.id === firstImage.id || imageObject.id === secondImage.id) {
+                imageObject = randomImage(arr);
+            }    
+            thirdImage = imageObject
+        }
+        let elImage = document.createElement('img');
+        elImageContainer.appendChild(elImage);
+        elImage.setAttribute('id', imageObject.id);
+        elImage.src = imageObject.filePath;
+        }
+
+}
+
 
 //define a fuction for the event handler, needs to store the item chosen to responseArray
+
+
+displayImage(clothingArray);
