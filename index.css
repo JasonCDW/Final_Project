@@ -23,7 +23,7 @@
     text-align: center;
 }
 
-#romance-icon:hover, #comedy-icon:hover, #tragedy-icon:hover{
+#icon-container img:hover{
     transform: scale(1.1, 1.1);
     box-shadow: 10px 10px 5px rgba(128, 128, 128, 0.40);
 }
