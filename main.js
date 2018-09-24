@@ -108,7 +108,7 @@ let displayImage = function(arr){
 
 //define a fuction for the event handler, needs to store the item chosen to responseArray
 
-displayImage(superheroArray);
+//displayImage(superheroArray);
 function selectImg(event){
     responseArray.push(event.target.id);
     i++;

@@ -7,22 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="nav.css" />
 </head>
 <body class = 'bbg' id = 'body'>
-    
-    <div id = 'image-container'>
-        <nav><a href = index.html><img src = "images/nav/create.png"></a><a href = story.html><img src = "images/nav/read.png"></a><a href = about.html></a></nav>
-        
+    <div id='nav-container'>
+        <nav id = 'nav-bar'><a href = index.html><img id = 'createIcon' src = "images/nav/create.png"></a><a href = story.html><img id = 'storyIcon' src = "images/nav/read.png"></a><a href = about.html></a></nav>
     </div>
     
     <!-----Alyssa working on above -->
     
-    <img id="createStory" src="images/settings/createStory_back.jpg"/>
+    <!-- <img id="createStory" src="images/settings/createStory_back.jpg"/> -->
     <div id = 'icon-container'>
         <img id='romance-icon'src='images/icons/romance_icon.png' onclick="changeBackgroundImage(Romance);"/>
         <img id='comedy-icon' src='images/icons/comedy_icon.png' onclick="changeBackgroundImage(Comedy);"/>
         <img id='tragedy-icon' src='images/icons/tragedy_icon.png' onclick="changeBackgroundImage(Tragedy);"/>
     </div>
+    <div id = 'image-container'></div>
 </body>
 <script src="index.js"></script>
 <script src='main.js'></script>
