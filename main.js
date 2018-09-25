@@ -47,6 +47,7 @@ let Orange = new Image ('orange', './images/colors/orange.gif', 'orange', 'color
 let Yellow = new Image ('yellow', './images/colors/yellow.gif', 'yellow', 'color');
 let Red = new Image ('red', './images/colors/red.gif', 'red', 'color');
 let Green = new Image ('green', './images/colors/green.gif', 'green', 'color');
+let Purple = new Image ('purple', './images/colors/purple.gif', 'purple', 'color');
 
 //instantiate new instance of object constructor for exotic animals
 let Cabra = new Image('cabra','./images/animals/cabra.jpg','cabra','animal')
@@ -58,7 +59,7 @@ let Raccoon = new Image('raccoon','./images/animals/RaccoonDog.jpg', 'raccoon', 
 let superheroArray = [Batman, Deadpool, Hulk, Spiderman, Wolverine];
 let clothingArray = [Jacket1, Hat, Shirt, Shirt2, Sneaker, Watch, Shoe];
 let storyPathArray = [Romance, Tragedy, Comedy];
-let colorArray = [Blue, Orange, Yellow, Red, Green];
+let colorArray = [Blue, Orange, Yellow, Red, Green, Purple];
 let animalArray = [Cabra, Cow, Mara, Raccoon];
 let numberArray = [];
 
