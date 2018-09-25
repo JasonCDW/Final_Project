@@ -2,7 +2,9 @@
     /* The image used */
     /* background-image: url('...'); */
     /* Full height */
-    height: 100%; 
+    margin: 0px;
+    height: 100%;
+    width: 100%;
     /* Center and scale the image nicely */
     background-position: top;
     background-attachment: fixed;
@@ -22,8 +24,22 @@
     width: 100%;
     text-align: center;
 }
+#icon-container img {
+    border-style: solid;
+    border-color: black;
+}
 
 #icon-container img:hover{
     transform: scale(1.1, 1.1);
     box-shadow: 10px 10px 5px rgba(128, 128, 128, 0.40);
+}
+
+#image-container img{
+    border-style: solid;
+    border-color: black;
+}
+
+#story-path {
+    margin-top: 65px;
+    text-align: center;
 }
