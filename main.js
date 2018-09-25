@@ -1,7 +1,8 @@
 //define array to hold user's responses
 let responseArray = [];
-let i = 0;
+let i = -1;
 
+let elQuestionContainer = document.getElementById('question-container');
 let elImageContainer = document.getElementById('image-container');
 //let elCreateStoryImg = document.getElementById('createStory');
 
@@ -102,17 +103,40 @@ let displayImage = function(arr){
         elImage.setAttribute('id', imageObject.id);
         elImage.src = imageObject.filePath;
         elImage.addEventListener('click', selectImg)
-        }
-
+        };
+};
+function displayQuestions(){
+    elQuestionContainer.innerText = '';
+    if (i === 0){
+        let elQuestion0 = document.createElement('h1');
+        elQuestion0.setAttribute('class', 'questions');
+        elQuestionContainer.appendChild(elQuestion0);
+        elQuestion0.innerText = 'Choose Your Favorite Superhero';
+    } else if (i === 1){
+        let elQuestion1 = document.createElement('h1');
+        elQuestion1.setAttribute('class', 'questions');
+        elQuestionContainer.appendChild(elQuestion1);
+        elQuestion1.innerText = 'Choose Your Favorite Clothing Item';  
+    } else if (i === 2){
+        let elQuestion2 = document.createElement('h1');
+        elQuestion2.setAttribute('class', 'questions');
+        elQuestionContainer.appendChild(elQuestion2);
+        elQuestion2.innerText = 'Choose Your Favorite Color';
+    } else if (i === 3){
+        let elQuestion3 = document.createElement('h1');
+        elQuestion3.setAttribute('class', 'questions');
+        elQuestionContainer.appendChild(elQuestion3);
+        elQuestion3.innerText = 'Choose Your Favorite Animal';
+    }
 }
 
 
 //define a fuction for the event handler, needs to store the item chosen to responseArray
 
-//displayImage(superheroArray);
 function selectImg(event){
     responseArray.push(event.target.id);
     i++;
+    displayQuestions();
     if (i < ArrArray.length) {
         displayImage(ArrArray[i]);
     } else {
