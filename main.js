@@ -67,7 +67,7 @@ let numberArray = [];
 let ArrArray = [superheroArray, clothingArray, colorArray, animalArray];
 //Change HTML Background Functions
 
-
+//HTML Background function in index.js
 
 //defining a function to randomize all the arrays except numberArray
 function randomImage (arr) {
