@@ -5,6 +5,8 @@ let i = 0;
 let elImageContainer = document.getElementById('image-container');
 //let elCreateStoryImg = document.getElementById('createStory');
 
+
+
 let firstImage;
 let secondImage;
 let thirdImage;
