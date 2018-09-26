@@ -1,6 +1,6 @@
 
 let elBody = document.getElementById('body');
-let j = 0;
+let j = -1;
 let k = 0;
 let storyPath;
 let bgimg;

@@ -104,6 +104,7 @@ let displayImage = function(arr){
         elImage.src = imageObject.filePath;
         elImage.addEventListener('click', selectImg)
         };
+
 };
 function displayQuestions(){
     elQuestionContainer.innerText = '';
@@ -128,8 +129,7 @@ function displayQuestions(){
         elQuestionContainer.appendChild(elQuestion3);
         elQuestion3.innerText = 'Choose Your Favorite Animal';
     }
-}
-
+};
 
 //define a fuction for the event handler, needs to store the item chosen to responseArray
 
