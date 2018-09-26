@@ -6,21 +6,64 @@
     <title>About</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="nav.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
     <script src="main.js"></script>
 </head>
-<body>
-    <!--group started one day, six weeks later w/ help of zach and TAs and html; electric-->
-    <header><h1>About Us</h1></header>
-    <div id = 'image-container'>
-    <nav><a href = index.html><img src = "images/nav/create.png"></a><a href = story.html><img src = "images/nav/about."></a><a href = about.html></a></nav>
- 
-
+<body id = 'about-page'>
+    <div id = 'header-container'>
+        <h1 id = 'site-title'>Supergroup's Story Creator</h1>
+        <nav id = 'header-nav'>
+            <a href = "index.html">
+                <img class = 'nav-icon' src = "images/nav/create.png">
+            </a>
+            <a href = "story.html">
+                <img class = 'nav-icon' src = "images/nav/read.png">
+            </a>
+            <a href = "about.html">
+                <img class = 'nav-icon' src = "images/nav/about.png">
+            </a>
+        </nav>
     </div>
+    <h1 id = 'title'>About Us</h1>
+
 
     <!-----Alyssa working on above -->
-    <span id = 'text-container'></span>
-
-
+   <div id = 'all-images'>
+    <div class = 'container'>
+            <img class = 'bitmoji' src = 'images/about/greg.png' alt = 'greg'>
+            <div class = 'overlay'>
+                <div class = 'bio'>Greg is a professional cook and immigrant from Taiwan. His favorite food to eat is noodles but when he's the chef, he enjoys cooking up something new each time. The same is true with his coding, he continues to cook up quality and creativity.</div>
+            </div>
+    </div>
+    <div class = 'container'>
+      <img class = 'bitmoji' src = 'images/about/mandana.png' alt = 'mandana'>
+        <div class = 'overlay'>
+            <div class = 'bio'>Mandana is a computer-aided design (CAD) technician. Before emigrating to the US, she worked in the profession for 18 years in Iran. She enjoys watching historical dramas like Downton Abbey and reading history books about Iran in her free time. She hopes that learning programming will help her transition to a CAD position in the States. With a history like she has, we don't doubt it.</div>
+        </div>
+    </div>
+    <div class = 'container'>
+            <img class = 'bitmoji' src = 'images/about/jason.png' alt = 'jason'>
+            <div class = 'overlay'>
+                <div class = 'bio'> Jason is 20-year-old and a computer science student at Howard Community College. Check out his sneakers today because you won't see him wearing the same pair twice. He plans to go from selling sneakers to setting up sites.</div>
+            </div> 
+    </div>
+  
+    <div class = 'second-row'>
+        <div class = 'container'>
+                <img class = 'bitmoji' src = 'images/about/alyssa.png' alt = 'alyssa' id = 'alyssa-image'>
+                <div class = 'overlay'>
+                    <div class = 'bio'>Alyssa is coffee person dog computers etcetera.</div>
+              </div>
+        </div>
+    <div class = 'container'>
+        <img class = 'bitmoji' src = 'images/about/gary.png' alt = 'gary'>
+        <div class = 'overlay'>
+            <div class = 'bio'>Gary has a degree in finance and investment from CUNY-Baruch. He has worked for over 30 years in finance at places like JP Morgan, and AIG. He decided to 'follow the code' and a new careerpath.js, hoping bring his laptop straight from Wall Street to the beaches of the Dominican Republic.</div>
+        </div>
+    </div>
+</div>
+</div>
 </body>
 <script src="main.js"></script>
 

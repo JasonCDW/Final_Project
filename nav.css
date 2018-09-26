@@ -1,0 +1,83 @@
+#header-container, #header-nav, #site-title, .nav-icon{
+    display: inline;
+}
+.nav-icon{
+    width: 3%;
+    height: 3%;
+    margin: 3%;
+    border-radius: 2px;
+    box-shadow: none;
+}
+.container {
+    position:relative;
+    width: calc(100% /4);
+    height: 50%;
+    float: left;
+    margin-left: 2%;
+    margin-left: 2%;
+    margin-top: 5%;
+    margin-bottom: 0%;
+}
+
+.bitmoji{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right:auto;
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+    margin-top: 0;
+
+}
+
+.overlay{
+    position: absolute;
+    top: 14%;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+    height: 70%;
+    width: auto;
+    opacity: 0; 
+    transition: .5s ease;
+    background-color: orange;
+    border-radius: 15px;
+}
+.container:hover .overlay {
+    opacity: .95;
+    border-radius: 15px;
+    transform: scale(1.5);
+    
+}
+
+.bio{
+    color: black;
+    font-size: 9px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    top:50%;
+    left:50%;
+    height: auto;
+}
+.second-row{
+    margin-left: 120px;
+}
+  
+#title, .bio{
+    font-family: 'Lora', serif;
+    text-align: center;
+
+}
+#title{
+    margin: 0;
+}
+#about-page {
+    background-image: url("images/about/office.jpg");
+
+}
+#all-images{
+    height: 50%;
+}
