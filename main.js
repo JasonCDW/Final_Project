@@ -5,6 +5,9 @@ let i = 0;
 let elImageContainer = document.getElementById('image-container');
 //let elCreateStoryImg = document.getElementById('createStory');
 
+//Defining span class for html - Greg
+
+
 
 
 let firstImage;
