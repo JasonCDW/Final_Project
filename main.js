@@ -6,7 +6,10 @@ let elQuestionContainer = document.getElementById('question-container');
 let elImageContainer = document.getElementById('image-container');
 let elNameInput = document.getElementById('name-input');
 let elNameInputForm = document.getElementById('name-form-container');
-let elNameAcceptButton = document.getElementById('acceptButton')
+let elNameAcceptButton = document.getElementById('acceptButton');
+let elNumberInputForm = document.getElementById('number-input-container');
+let elNumberInput = document.getElementById('number-input');
+let elNumberAccept = document.getElementById('number-submit');
 //let elCreateStoryImg = document.getElementById('createStory');
 
 let firstImage;
@@ -149,6 +152,15 @@ function nameAccept(event){
     };
 };
 
+elNumberAccept.addEventListener('click', numberAccept);
+function numberAccept(event){
+    event.preventDefault();
+    if(parseInt(elNumberInput.value) >= 1 && parseInt(elNumberInput.value) <= 31){
+        responseArray.push(parseInt(elNumberInput.value));
+        console.log('done');
+    }
+};
+
 function selectImg(event){
     responseArray.push(event.target.id);
     i++;
@@ -157,8 +169,9 @@ function selectImg(event){
         displayImage(ArrArray[i]);
     } else if (i === ArrArray.length -1) {
         elImageContainer.innerHTML ='';
-    }
-    else {
-        window.location.href = "story.html";
+        elNumberInputForm.setAttribute('class', 'shown');
     };
+    // else {
+    //     window.location.href = "story.html";
+    // };
 };
