@@ -157,8 +157,16 @@ function numberAccept(event){
     event.preventDefault();
     if(parseInt(elNumberInput.value) >= 1 && parseInt(elNumberInput.value) <= 31){
         responseArray.push(parseInt(elNumberInput.value));
-        console.log('done');
-    }
+        if(storyPath === 'romance'){
+            window.location.href = "romanceStory.html";
+        } else if(storyPath === 'tragedy'){
+            window.location.href = "tragedyStory.html";
+        } else if(storyPath === 'comedy'){
+            window.location.href = "comedyStory.html"
+        };
+    } else {
+        alert('Please enter a number between 1 and 31.');
+    };
 };
 
 function selectImg(event){
