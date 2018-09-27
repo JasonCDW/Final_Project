@@ -10,7 +10,12 @@ let elNameAcceptButton = document.getElementById('acceptButton');
 let elNumberInputForm = document.getElementById('number-input-container');
 let elNumberInput = document.getElementById('number-input');
 let elNumberAccept = document.getElementById('number-submit');
-//let elCreateStoryImg = document.getElementById('createStory');
+let elNewStory = document.getElementById('createIcon');
+elNewStory.addEventListener('click', newStory);
+function newStory(event){
+    localStorage.clear();
+}
+
 
 let firstImage;
 let secondImage;
@@ -157,6 +162,7 @@ function numberAccept(event){
     event.preventDefault();
     if(parseInt(elNumberInput.value) >= 1 && parseInt(elNumberInput.value) <= 31){
         responseArray.push(parseInt(elNumberInput.value));
+        localStorage.setItem('storageResponseArray', JSON.stringify(responseArray));
         if(storyPath === 'romance'){
             window.location.href = "romanceStory.html";
         } else if(storyPath === 'tragedy'){
@@ -179,7 +185,4 @@ function selectImg(event){
         elImageContainer.innerHTML ='';
         elNumberInputForm.setAttribute('class', 'shown');
     };
-    // else {
-    //     window.location.href = "story.html";
-    // };
 };
