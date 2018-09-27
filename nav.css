@@ -10,7 +10,7 @@
     transform: scale(1.1, 1.1);
     box-shadow: 0px 0px 0px rgba(128, 128, 128, 0.40);
 }
-#storyIcon , #createIcon{
+#storyIcon , #createIcon, #aboutIcon{
     margin-top: 0px;
     margin-bottom: 32px;
     width: 50px;
