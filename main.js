@@ -148,7 +148,9 @@ elNameAcceptButton.addEventListener('click', nameAccept);
 function nameAccept(event){
     if (elNameInput.value != ""){
         responseArray.push(elNameInput.value);
-        j++;
+        if (j === -1){
+            j += 2;
+        }
         if(j === 1) {
             elNameInputForm.setAttribute('class', 'hidden')
             displayQuestions();
@@ -160,7 +162,7 @@ function nameAccept(event){
 elNumberAccept.addEventListener('click', numberAccept);
 function numberAccept(event){
     event.preventDefault();
-    if(parseInt(elNumberInput.value) >= 1 && parseInt(elNumberInput.value) <= 31){
+    if(parseInt(elNumberInput.value) >= 1 && parseInt(elNumberInput.value) <= 30){
         responseArray.push(parseInt(elNumberInput.value));
         localStorage.setItem('storageResponseArray', JSON.stringify(responseArray));
         if(storyPath === 'romance'){
@@ -171,7 +173,7 @@ function numberAccept(event){
             window.location.href = "comedyStory.html"
         };
     } else {
-        alert('Please enter a number between 1 and 31.');
+        alert('Please enter a number between 1 and 30.');
     };
 };
 

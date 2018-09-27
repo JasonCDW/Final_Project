@@ -1,4 +1,4 @@
-
+let elStoryTitle = document.getElementById('story-path');
 let elBody = document.getElementById('body');
 let j = -1;
 let k = 0;
@@ -30,12 +30,15 @@ function changeBackgroundImage(obj) {
     let bgimgsrc = obj.filePath;
     bgimg = bgimgsrc;
     document.body.style.backgroundImage = 'url("'+bgimgsrc+'")';
-    j++;
+    if(j===0){
+        j++;
+    };
     if(j === 1) {
         displayQuestions();
         displayImage(superheroArray);
     }; 
     if(i === 0){
+        elStoryTitle.setAttribute('class', 'questions');
         elNameInputForm.setAttribute('class', 'shown');
     };
 };

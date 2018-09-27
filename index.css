@@ -1,3 +1,7 @@
+@font-face{
+    font-family: 'enchantedFont';
+    src: url(./Fonts/Enchanted\ Land\ DEMO.otf);
+}
 .bbg { 
     /* The image used */
     /* background-image: url('...'); */
@@ -10,6 +14,10 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.questions{
+    color: white;
+    font-family: 'enchantedFont'
 }
 
 #romance-icon, #comedy-icon, #tragedy-icon {
@@ -42,6 +50,7 @@
 #story-path {
     margin-top: 65px;
     text-align: center;
+    font-family: 'enchantedFont';
 }
 h1 {
     text-align: center;

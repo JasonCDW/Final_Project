@@ -13,8 +13,8 @@
     <div id='nav-container'>
         <nav id = 'nav-bar'>
             <a href = index.html><img id = 'createIcon' class = 'nav-icon' src = "images/nav/create.png"></a>
-            <a href = story.html><img id = 'storyIcon' class = 'nav-icon' src = "images/nav/read.png"></a>
-            <a href = "about.html"><img id = 'aboutIcon' class = 'nav-icon' src = "images/nav/about.png"></a>
+            <a href = about.html><img id = 'storyIcon' class = 'nav-icon' src = "images/nav/read.png"></a>
+            <a href = about.html><img id = 'aboutIcon' class = 'nav-icon' src = "images/nav/about.png"></a>
         </nav>
     </div>
     
@@ -27,15 +27,15 @@
         <img id='tragedy-icon' src='images/icons/tragedy_icon.png' onclick="changeBackgroundImage(Tragedy);"/>
     </div>
     <div class ='hidden' id = 'name-form-container'>
-        <h1 id='name-title'>Enter Your Name</h1>
+        <h1 id='name-title' class='questions'>Enter Your Name</h1>
         <input id='name-input' autocomplete='off' required placeholder="Name" name='name'>
         <div id = 'button-container'>
             <h4 id='acceptButton'>Accept</h4>
         </div>
     </div>
     <div class = 'hidden' id = 'number-input-container'>
-        <h1 id='number-title'>Enter A Number (Between 1 and 31)</h1>
-        <input type="number" id='number-input' required placeholder="Number" name='number' min="1" max="31">
+        <h1 id='number-title' class='questions'>Enter A Number (Between 1 and 30)</h1>
+        <input type="number" id='number-input' required placeholder="Number" name='number' min="1" max="30">
         <div id= 'numButton-container'>
             <button type='submit' id = 'number-submit'>Accept</button>
         </div>
