@@ -34,5 +34,8 @@ function changeBackgroundImage(obj) {
     if(j === 1) {
         displayQuestions();
         displayImage(superheroArray);
+    }; 
+    if(i === 0){
+        elNameInputForm.setAttribute('class', 'shown');
     };
 };

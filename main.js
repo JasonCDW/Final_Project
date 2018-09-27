@@ -4,6 +4,9 @@ let i = -1;
 
 let elQuestionContainer = document.getElementById('question-container');
 let elImageContainer = document.getElementById('image-container');
+let elNameInput = document.getElementById('name-input');
+let elNameInputForm = document.getElementById('name-form-container');
+let elNameAcceptButton = document.getElementById('acceptButton')
 //let elCreateStoryImg = document.getElementById('createStory');
 
 let firstImage;
@@ -64,7 +67,7 @@ let colorArray = [Blue, Orange, Yellow, Red, Green, Purple];
 let animalArray = [Cabra, Cow, Mara, Raccoon];
 let numberArray = [];
 
-let ArrArray = [superheroArray, clothingArray, colorArray, animalArray];
+let ArrArray = [superheroArray, clothingArray, colorArray, animalArray, numberArray];
 //Change HTML Background Functions
 
 //HTML Background function in index.js
@@ -102,7 +105,7 @@ let displayImage = function(arr){
         elImageContainer.appendChild(elImage);
         elImage.setAttribute('id', imageObject.id);
         elImage.src = imageObject.filePath;
-        elImage.addEventListener('click', selectImg)
+        elImage.addEventListener('click', selectImg);
         };
 
 };
@@ -131,15 +134,31 @@ function displayQuestions(){
     }
 };
 
+
 //define a fuction for the event handler, needs to store the item chosen to responseArray
+elNameAcceptButton.addEventListener('click', nameAccept);
+function nameAccept(event){
+    if (elNameInput.value != ""){
+        responseArray.push(elNameInput.value);
+        j++;
+        if(j === 1) {
+            elNameInputForm.setAttribute('class', 'hidden')
+            displayQuestions();
+            displayImage(superheroArray);
+        }; 
+    };
+};
 
 function selectImg(event){
     responseArray.push(event.target.id);
     i++;
     displayQuestions();
-    if (i < ArrArray.length) {
+    if (i < ArrArray.length - 1) {
         displayImage(ArrArray[i]);
-    } else {
+    } else if (i === ArrArray.length -1) {
+        elImageContainer.innerHTML ='';
+    }
+    else {
         window.location.href = "story.html";
     };
 };

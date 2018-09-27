@@ -22,8 +22,19 @@
         <img id='comedy-icon' src='images/icons/comedy_icon.png' onclick="changeBackgroundImage(Comedy);"/>
         <img id='tragedy-icon' src='images/icons/tragedy_icon.png' onclick="changeBackgroundImage(Tragedy);"/>
     </div>
-    <div id = 'form-container'>
-        <input id='name-input' required placeholder="Name" name='name'>
+    <div class ='hidden' id = 'name-form-container'>
+        <h1 id='name-title'>Enter Your Name</h1>
+        <input id='name-input' autocomplete='off' required placeholder="Name" name='name'>
+        <div id = 'button-container'>
+            <h4 id='acceptButton'>Accept</h4>
+        </div>
+    </div>
+    <div class = 'shown' id = 'number-input-container'>
+        <h1 id='number-title'>Enter A Number (Between 1 and 31)</h1>
+        <input type="number" id='number-input' required placeholder="Number" name='number' min="1" max="31">
+        <div id= 'numButton-container'>
+            <button id = 'number-submit'>Accept</button>
+        </div>
     </div>
     <div id = 'question-container'></div>
     <div id = 'image-container'></div>
