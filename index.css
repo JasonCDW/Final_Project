@@ -1,13 +1,23 @@
+@font-face{
+    font-family: 'enchantedFont';
+    src: url(./Fonts/Enchanted\ Land\ DEMO.otf);
+}
 .bbg { 
     /* The image used */
     /* background-image: url('...'); */
     /* Full height */
-    height: 100%; 
+    margin: 0px;
+    height: 100%;
+    width: 100%;
     /* Center and scale the image nicely */
     background-position: top;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.questions{
+    color: white;
+    font-family: 'enchantedFont'
 }
 
 #romance-icon, #comedy-icon, #tragedy-icon {
@@ -22,8 +32,66 @@
     width: 100%;
     text-align: center;
 }
+#icon-container img {
+    border-style: solid;
+    border-color: black;
+}
 
 #icon-container img:hover{
     transform: scale(1.1, 1.1);
     box-shadow: 10px 10px 5px rgba(128, 128, 128, 0.40);
+}
+
+#image-container img{
+    border-style: solid;
+    border-color: black;
+}
+
+#story-path {
+    margin-top: 65px;
+    text-align: center;
+    font-family: 'enchantedFont';
+}
+h1 {
+    text-align: center;
+}
+#number-submit{
+    margin-top: 20px;
+}
+#number-input{
+    text-align: center;
+    width: 162px;
+}
+#number-input-container{
+    text-align: center;
+}
+#name-form-container{
+    text-align: center;
+}
+.hidden{
+    display: none;
+}
+
+#button-container {
+    width: 100%;
+    text-align: center;
+}
+
+h4{
+    text-align: center;
+    font-family: myFirstFont;
+    font-size: 125%;
+    color: white;
+    background-color: crimson;
+    position: absolute;
+    left:0;
+    right:0;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: 73.4px;
+}
+
+h4:hover{
+    transform: scale(1.2, 1.2);
 }

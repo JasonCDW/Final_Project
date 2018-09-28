@@ -1,14 +1,16 @@
 #nav-bar{
     width: 100%;
     height: 50px;
-    background-color: rgba(150, 150, 150, 0.5);
+    background-color: rgba(150, 150, 150, 0.85);
     text-align: center;
+    position: fixed;
+    top: 0;
 }
 #nav-bar img:hover{
     transform: scale(1.1, 1.1);
     box-shadow: 0px 0px 0px rgba(128, 128, 128, 0.40);
 }
-#storyIcon , #createIcon{
+#storyIcon , #createIcon, #aboutIcon{
     margin-top: 0px;
     margin-bottom: 32px;
     width: 50px;

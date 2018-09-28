@@ -1,0 +1,20 @@
+@font-face{
+    font-family: 'enchantedFont';
+    src: url(./Fonts/Enchanted\ Land\ DEMO.otf);
+}
+
+
+body{
+    margin: 0px;
+    color: whitesmoke;
+    font-family: 'enchantedFont';
+    font-size: 23px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%
+}
+
+#main-title{
+    margin-top: 50px;
+}
