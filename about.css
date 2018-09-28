@@ -39,12 +39,14 @@ body{
  
  .overlay{
     position: absolute;
-    top: 0;
-    bottom: 0%;
-    left: 12%;
-    right: 12%;
-    height: 91%;
+    text-align: justify;
+    top: -2%;
+    bottom: 15%;
+    left: 10%;
+    right: 10%;
+    height: 84%;
     width: 76%;
+    border: 2px;
     opacity: 0;
     transition: .5s ease;
     background-color: orange;
@@ -58,13 +60,16 @@ body{
  
  .bio{
     color: black;
-    font-size: 9px;
+    font-size: 1vw;
+
     position: absolute;
     transform: translate(-50%,-50%);
     text-align: center;
     top:50%;
     left:50%;
-    height: auto;
+    height: 90%;
+    width: 90%;
+
  }
  .second-row{
     margin-left: auto;
